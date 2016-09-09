@@ -2,8 +2,36 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>网易云课堂</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="css/banner.css">
+	<style>
+
+		body,html{
+		/*	height: 2915px;*/
+			width: 1616px;
+		}
+		.notice-f,.head,.osm,.course,.foot{
+			width: 1205px;
+			margin: 0 auto;
+		}	
+
+/*	
+		body,html{
+			height: 2915px;
+			width: 1364px;
+		}
+		.notice-f,.head,.osm,.course,.foot{
+			width: 960px;
+			margin: 0 auto;
+		}
+	*/
+
+	</style>
+
+	<script src='script/base.js'></script>
 </head>
 <body>
 
@@ -19,7 +47,7 @@
 	<!-- 顶部头部 -->
 	<div class="head">
 		<div class="head-left">
-			<div class="logo-w"></div><h1>网易教育产品部</h1><div class="follow"></div><div class="fans">粉丝 45</div>
+			<div class="logo-w"></div><h1>网易教育产品部</h1><div id="follow" class="follow"></div><div class="fans">粉丝 45</div>
 		</div>
 		<div class="head-right">
 			<a href="">网易公开课</a>
@@ -32,7 +60,16 @@
 
 	<!-- 顶部banner -->
 	<div class="banner">
-		<img src="css/images/banner1.jpg" alt="">
+		<div class="banner-container">
+			<img src="css/images/banner1.jpg">
+			<img src="css/images/banner2.jpg">
+			<img src="css/images/banner3.jpg">
+		</div>
+		<div class="banner-dots">
+			<i class="ondot" index=0></i>
+			<i index=1></i>
+			<i index=2></i>
+		</div>
 	</div>
 	<!-- /顶部banner -->
 	
@@ -375,17 +412,20 @@
 	<!-- /底部 -->
 	
 	<!-- 弹窗 -->
-	<div class="m-modal">
-		<div class="modal-container">
-			<div class="modal-align"></div>
-			<div class="modal-body">
-				<h2>登录网易云课堂</h2>
-				<input type="text">
-				<input type="text">
-				<button type="submit">登录</button>
-			</div>
+	<div id="modal" class="m-modal">
+		<div class="modal-body">
+			<div class="modal-close"></div>
+			<h2>登录网易云课堂</h2>
+			<input type="text" placeholder="账号">
+			<input type="text" placeholder="密码">
+			<button type="submit">登录</button>
 		</div>
 	</div>
 	<!-- /弹窗 -->
+
+	<script src="script/base.js"></script>
+	<script src="script/modal.js"></script>
+	<script src="script/banner.js"></script>
+	
 </body>
 </html>

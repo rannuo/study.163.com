@@ -1,11 +1,16 @@
 
 *{
 	margin: 0;padding: 0;
+	font-family: "微软雅黑";
 }
-body,html{
+/*body,html{
 	height: 2915px;
 	width: 1616px;
 }
+.notice-f,.head,.osm,.course,.foot{
+	width: 1205px;
+	margin: 0 auto;
+}*/
 .clearfix:after{
 	content: ".";
 	display: block;
@@ -21,10 +26,7 @@ a{
 a:hover{
 	text-decoration: underline;color: #39a030;
 }
-.notice-f,.head,.osm,.course,.foot{
-	width: 1205px;
-	margin: 0 auto;
-}
+
 
 /*消息通知条*/
 .notice-f{
@@ -94,6 +96,7 @@ a:hover{
 	background-position: -96px 0;
 	background-repeat: no-repeat;
 	background-image: url(images/middleicon.png);
+	cursor: pointer;
 }
 .follow:hover{
 	background-position: -96px -21px;
@@ -132,7 +135,6 @@ a:hover{
 /*banner*/
 .banner{
 	height: 460px;
-	background-color: blue;
 }
 
 /*三个产品*/

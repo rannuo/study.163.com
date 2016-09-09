@@ -1,0 +1,42 @@
+/*轮播图的样式*/
+.banner{
+	position: relative;
+	width: 1652px;
+	height: 460px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.banner-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1652px;
+	height:460px;
+	z-index: 1;
+}
+.banner-container img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.banner-dots{
+	position: absolute;
+	height: 10px;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 2;
+}
+.banner-dots i{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #ccc;
+	border-radius: 50px;
+	margin: 0 10px;
+}
+.ondot{
+	background-color: #ccc;
+}
