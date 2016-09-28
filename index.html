@@ -431,7 +431,7 @@
 		var noticeClose = document.getElementById('notice-close');
 		noticeClose.onclick = function(){
 			notice.style.display = 'none';
-			cookieUtil.set('noticed',true);
+			document.cookie = 'noticed=true';
 		}
 		if(cookieUtil.get('noticed')){
 			notice.style.display = 'none';
