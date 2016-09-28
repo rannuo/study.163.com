@@ -388,9 +388,8 @@ a:hover{
 	margin-bottom: 14px;
 }
 .foot-right ul{
-	display: inline-block;
+	float: left;
 	margin: 80px auto auto 90px;
-	vertical-align: top;
 }
 .foot-right ul li{
 	list-style: none;
