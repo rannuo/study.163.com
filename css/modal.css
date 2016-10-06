@@ -38,12 +38,15 @@
 	width: 293px;
 	height: 43px;
 	border: 1px solid #dfdfdf;
-	margin-bottom: 15px;
 	font: 16px/43px '微软雅黑';
 	text-indent: 5px;
 	background-color: #fafafa;
 	box-shadow: inset 2px 2px #f1f1f1;
 	outline: none;
+}
+.modal-body .input-info{
+	font: 14px/16px '微软雅黑';
+	height: 16px;
 }
 .modal-body button{
 	width: 293px;
@@ -55,4 +58,27 @@
 	margin-top: 14px;
 	border: none;
 	box-shadow: 2px 2px #d5e3da;
+}
+#modal .info{
+	position: relative;
+	display: inline-block;
+	width: 9px;
+	height: 11px;
+	margin-left: 5px;
+	background: url(images/littleicon.png) 0 -63px;
+}
+#modal .info-text{
+	display: none;
+	position: absolute;
+	left: 15px;
+	padding: 	4px;
+	font-size: 12px;
+	font-style: normal;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+
+}
+#modal .info:hover .info-text{
+	display: block;
 }

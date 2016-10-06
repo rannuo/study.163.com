@@ -13,41 +13,34 @@
 		/*	height: 2915px;*/
 			width: 1616px;
 		}
-		.notice-f,.head,.osm,.course,.foot{
+		.head,.osm,.course,.foot{
 			width: 1205px;
 			margin: 0 auto;
 		}	
 
-/*	
-		body,html{
-			height: 2915px;
-			width: 1364px;
-		}
-		.notice-f,.head,.osm,.course,.foot{
-			width: 960px;
-			margin: 0 auto;
-		}
-	*/
 
 	</style>
 
 	<script src='script/base.js'></script>
+	<script>
+	</script>
 </head>
 <body>
 
 	<!-- 消息通知条 -->
-	<div class="notice-f">
-		<div class="notice">
-			<div class="notice-left">网易云课堂微专业，帮你掌握专业技能，令你求职或加薪多一份独特优势！<a href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看&gt;</a></div>
-			<div class="notice-right"><i></i>不再提醒</div>
-		</div>
-	</div>
+	<div id="notice-wrap"></div>
 	<!-- /消息通知条 -->
 
 	<!-- 顶部头部 -->
 	<div class="head">
 		<div class="head-left">
-			<div class="logo-w"></div><h1>网易教育产品部</h1><div id="follow" class="follow"></div><div class="fans">粉丝 45</div>
+			<div class="logo-w"></div><h1>网易教育产品部</h1><span id="follow-wrap"><div id="follow" class="follow"></div><div class="fans">粉丝 45</div></span>
+			<div class="followed">
+				<i class="bingo"></i>
+				<span>已关注</span>
+				<i class="string"></i>
+				<a href="javascript:void(0)">取消</a>
+			</div>
 		</div>
 		<div class="head-right">
 			<a href="">网易公开课</a>
@@ -59,7 +52,8 @@
 	<!-- /顶部头部 -->
 
 	<!-- 顶部banner -->
-	<div class="banner">
+	<div id="banner-wrap"></div>
+	<!-- <div class="banner">
 		<div class="banner-container">
 			<img src="css/images/banner1.jpg">
 			<img src="css/images/banner2.jpg">
@@ -70,7 +64,7 @@
 			<i index=1></i>
 			<i index=2></i>
 		</div>
-	</div>
+	</div> -->
 	<!-- /顶部banner -->
 	
 	<!-- 三个产品 -->
@@ -103,6 +97,7 @@
 	<!-- /三个产品 -->
 
 	<!-- 工作环境 -->
+
 	<div class="env">
 		<div><img src="css/images/workspace1.jpg" alt=""></div>
 		<div><img src="css/images/workspace2.jpg" alt=""></div>
@@ -415,17 +410,60 @@
 	<div id="modal" class="m-modal">
 		<div class="modal-body">
 			<div class="modal-close"></div>
-			<h2>登录网易云课堂</h2>
-			<input type="text" placeholder="账号">
-			<input type="text" placeholder="密码">
-			<button type="submit">登录</button>
+			<h2>登录网易云课堂
+				<i class="info">
+					<div class="info-text">账号：studyOnline;<br/>密码：study.163.com</div>
+				</i>
+			</h2>
+			<form id="login">
+				<input name="username" type="text" placeholder="账号">
+				<p id="user_info" class="input-info"></p>
+				<input name="password" type="password" placeholder="密码">
+				<p id="password_info" class="input-info"></p>
+				<button id="login-btn" type="submit">登录</button>
+			</form>
 		</div>
 	</div>
 	<!-- /弹窗 -->
 
 	<script src="script/base.js"></script>
+	<script src="script/md5.js"></script>
+	<script src='script/notice.js'></script>
 	<script src="script/modal.js"></script>
 	<script src="script/banner.js"></script>
-	
+	<script>
+		//居中显示
+		addLoadEvent(function(){
+			window.scrollBy((document.body.offsetWidth-window.innerWidth)/2 - window.scrollX,0);
+		});
+	</script>
+	<!-- <script type="text/javascript">
+		var noticeHtml = 
+		'<div id="notice" class="notice-f">\
+			<div class="notice">\
+				<div class="notice-left">网易云课堂微专业，帮你掌握专业技能，令你求职或加薪多一份独特优势！<a href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看&gt;</a></div>\
+				<div id="notice-close" class="notice-right"><i></i>不再提醒</div>\
+			</div>\
+		</div>';
+		function html2node(str){
+		    var container = document.createElement('div');
+		    container.innerHTML = str;
+		    return container.children[0];
+		  }
+		var notice = document.getElementById('notice');
+		var noticeClose = document.getElementById('notice-close');
+		noticeClose.onclick = function(){
+			notice.style.display = 'none';
+			cookieUtil.set('noticed',true);
+		}
+		if(cookieUtil.get('noticed')){
+			notice.style.display = 'none';
+		}else{
+			notice.style.display = 'block';
+		};
+		EventUtil.addHandler(window,'load',function(){
+			document.getElementById('notice-wrap').appendChild(html2node(noticeHtml));
+		});
+	</script> -->
 </body>
 </html>

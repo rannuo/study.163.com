@@ -2,6 +2,7 @@
 *{
 	margin: 0;padding: 0;
 	font-family: "微软雅黑";
+	border: none;
 }
 /*body,html{
 	height: 2915px;
@@ -92,7 +93,7 @@ a:hover{
 	display: inline-block;
 	height: 21px;
 	width: 54px;
-	margin-right: 20px;
+	margin-right: 15px;
 	background-position: -96px 0;
 	background-repeat: no-repeat;
 	background-image: url(images/middleicon.png);
@@ -103,7 +104,7 @@ a:hover{
 }
 .fans{
 	display: inline-block;
-	font: 12px/87px "宋体";
+	font: 12px/87px "å®‹ä½“";
 	position: relative;
 	top: -7px;
 }
@@ -113,8 +114,49 @@ a:hover{
 	line-height: 87px;
 	margin-right: 20px;
 	vertical-align: 3px;
+}
+.followed{
+	display: none;
+	font: 12px/12px '微软雅黑';
+	position: relative;
+	top: -7px;
+	border: 1px solid #efefef;
+	border-radius: 1px;
+	padding: 3px 6px 4px 22px;
+	background-color: #f8f8f8;
+}
+.followed:hover{
+	background-color: transparent;
+}
+.followed span{
+	color: #333;
+}
+.followed a{
+	color: #999;
+}
+.followed a:hover{
+	color: #39a039;
+}
+.followed .bingo{
+	display: inline-block;
+	width: 11px;
+	height: 9px;
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	background: url(images/littleicon.png) -25px 0;
+}
+.followed .string{
+	display: inline-block;
+	width: 1px;
+	height: 10px;
+	margin-right: 5px;
+	margin-left: 7px;
+	background-color: #ccc;
 
 }
+
+
 .head-right a{
 	margin-left: 52px;
 }
@@ -131,10 +173,15 @@ a:hover{
 	background-position: -24px -20px;
 }
 
-
 /*banner*/
+.banner-wrap *{
+	border: none;
+}
 .banner{
 	height: 460px;
+}
+.banner img{
+	display: block;
 }
 
 /*三个产品*/
@@ -372,7 +419,7 @@ a:hover{
 	display: inline-block;
 	width: 70px;
 	height: 20px;
-	margin: 95px 12px 30px 50px;
+	margin: 94px 12px 31px 50px;
 	background-image: url(images/middleicon.png);
 	background-position: 0 -281px;
 	background-repeat: no-repeat;
@@ -388,9 +435,8 @@ a:hover{
 	margin-bottom: 14px;
 }
 .foot-right ul{
-	display: inline-block;
+	float: left;
 	margin: 80px auto auto 90px;
-	vertical-align: top;
 }
 .foot-right ul li{
 	list-style: none;
