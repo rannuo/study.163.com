@@ -28,7 +28,16 @@
 <body>
 
 	<!-- 消息通知条 -->
+<<<<<<< HEAD
 	<div id="notice-wrap"></div>
+=======
+	<div id="notice" class="notice-f">
+		<div class="notice">
+			<div class="notice-left">网易云课堂微专业，帮你掌握专业技能，令你求职或加薪多一份独特优势！<a href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro" target="_blank">立即查看&gt;</a></div>
+			<div id="notice-close" class="notice-right"><i></i>不再提醒</div>
+		</div>
+	</div>
+>>>>>>> origin/master
 	<!-- /消息通知条 -->
 
 	<!-- 顶部头部 -->
@@ -410,6 +419,7 @@
 	<div id="modal" class="m-modal">
 		<div class="modal-body">
 			<div class="modal-close"></div>
+<<<<<<< HEAD
 			<h2>登录网易云课堂
 				<i class="info">
 					<div class="info-text">账号：studyOnline;<br/>密码：study.163.com</div>
@@ -421,6 +431,13 @@
 				<input name="password" type="password" placeholder="密码">
 				<p id="password_info" class="input-info"></p>
 				<button id="login-btn" type="submit">登录</button>
+=======
+			<h2>登录网易云课堂</h2>
+			<form action="">
+			<input type="text" placeholder="账号">
+			<input type="text" placeholder="密码">
+			<button type="submit">登录</button>
+>>>>>>> origin/master
 			</form>
 		</div>
 	</div>
@@ -431,6 +448,7 @@
 	<script src='script/notice.js'></script>
 	<script src="script/modal.js"></script>
 	<script src="script/banner.js"></script>
+<<<<<<< HEAD
 	<script>
 		//居中显示
 		addLoadEvent(function(){
@@ -450,6 +468,9 @@
 		    container.innerHTML = str;
 		    return container.children[0];
 		  }
+=======
+	<script type="text/javascript">
+>>>>>>> origin/master
 		var notice = document.getElementById('notice');
 		var noticeClose = document.getElementById('notice-close');
 		noticeClose.onclick = function(){
@@ -461,9 +482,14 @@
 		}else{
 			notice.style.display = 'block';
 		};
+<<<<<<< HEAD
 		EventUtil.addHandler(window,'load',function(){
 			document.getElementById('notice-wrap').appendChild(html2node(noticeHtml));
 		});
 	</script> -->
+=======
+
+	</script>
+>>>>>>> origin/master
 </body>
 </html>
