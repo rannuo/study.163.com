@@ -41,7 +41,6 @@ var EventUtil = {
 		}
 	}
 };
-<<<<<<< HEAD
 
 function html2node(str){
     var container = document.createElement('div');
@@ -49,10 +48,6 @@ function html2node(str){
     return container.children[0];
 }
 		
-=======
-
-
->>>>>>> origin/master
 //window对象
 function addLoadEvent(func) {
 	var oldonload = window.onload;
@@ -112,7 +107,6 @@ var cookieUtil = {
 		this.set(name,"",new Date(0),path,domain,secure);
 	}
 };
-<<<<<<< HEAD
 
 /**
  * [get description]
@@ -213,5 +207,3 @@ function serialize(data){
     }
     return pairs.join('&');
 }
-=======
->>>>>>> origin/master
