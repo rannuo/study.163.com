@@ -1,2 +1,0 @@
-// hotcourses.js
-
