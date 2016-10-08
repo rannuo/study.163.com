@@ -48,7 +48,7 @@ EventUtil.addHandler(form,'submit',function(event){
 
 
 function loginSuc(data){
-	get('http://study.163.com/webDev/attention.htm',{},followSuc);
+	get('https://study.163.com/webDev/attention.htm',{},followSuc);
 	modal.style.display = 'none';
 }
 function followSuc(){
