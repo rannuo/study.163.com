@@ -14,7 +14,7 @@
 		</div>\
 	</div>';
 	EventUtil.addHandler(window,'load',function(){
-		document.getElementById('banner-wrap').appendChild(html2node(bannerHtml));
+		//document.getElementById('banner-wrap').appendChild(html2node(bannerHtml));
 		var viewport = document.querySelector('.banner');
 		var imgs = document.querySelector('.banner-container').getElementsByTagName('img');
 		var dots = document.querySelector('.banner-dots').getElementsByTagName('i');
