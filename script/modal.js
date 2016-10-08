@@ -36,7 +36,7 @@ EventUtil.addHandler(form,'submit',function(event){
 	event = EventUtil.getEvent(event);
 	if(validateUserName()&&validatePassword()){
 		alert('账号密码正确');
-		get('http://study.163.com/webDev/login.htm',{userName:md5(form.username.value),password:md5(form.password.value)},
+		get('https://study.163.com/webDev/login.htm',{userName:md5(form.username.value),password:md5(form.password.value)},
 		loginSuc);
 
 	}else{
